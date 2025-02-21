@@ -55,3 +55,28 @@ print_matrix(matrix=second_matrix)
 
 
 print("### Searching in a Matrix ###\n")
+
+
+def find_element(matrix: list[list[int]], key: int) -> bool:
+    """
+    Searches for the given element in the matrix.
+
+    Parameters:
+        matrix (list[list[int]]): The matrix to be searched.
+        key (int): The element to be searched.
+
+    Returns:
+        bool: True if the element is found, False otherwise.
+    """
+    for row in matrix:
+        for element in row:
+            if element == key:
+                return True
+
+    return False
+
+
+if find_element(matrix=second_matrix, key=5):
+    print("Element 5 found in the matrix.\n")
+else:
+    print("Element 5 not found in the matrix.\n")
